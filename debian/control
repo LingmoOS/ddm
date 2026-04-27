@@ -1,0 +1,45 @@
+Source: ddm
+Priority: optional
+Maintainer: justforlxz <zhangdingyuan@deepin.org>
+Build-Depends: debhelper-compat (= 13),
+               cmake (>= 3.4~),
+               extra-cmake-modules (>= 1.4.0~),
+               libpam0g-dev,
+               libsystemd-dev [linux-any],
+               libwayland-dev,
+               libxau-dev,
+               pkg-config,
+               qt6-base-dev (>= 6.6.1~),
+               systemd [linux-any],
+               treeland-protocols,
+Standards-Version: 4.6.0
+Section: libs
+Homepage: https://github.com/linuxdeepin/ddm.git
+Rules-Requires-Root: no
+
+Package: ddm
+Section: libdevel
+#Provides: x-display-manager
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         seatd,
+         treeland,
+         libpam-systemd,
+Description: a modern display manager for Wayland sessions aiming to be fast, simple and beautiful.
+
+Package: libddm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: DDM library
+  provide PAM libraries
+
+Package: libddm-dev
+Architecture: any
+Depends: ${misc:Depends},
+         libddm( =${binary:Version}),
+         qt6-base-dev
+Description: DDM devel library
+  provide PAM headers
