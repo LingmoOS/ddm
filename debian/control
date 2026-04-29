@@ -1,6 +1,7 @@
 Source: ddm
+Section: libs
 Priority: optional
-Maintainer: justforlxz <zhangdingyuan@deepin.org>
+Maintainer: Lingmo OS Team <team@lingmo.org>
 Build-Depends: debhelper-compat (= 13),
                cmake (>= 3.4~),
                extra-cmake-modules (>= 1.4.0~),
@@ -13,8 +14,7 @@ Build-Depends: debhelper-compat (= 13),
                systemd [linux-any],
                treeland-protocols,
 Standards-Version: 4.6.0
-Section: libs
-Homepage: https://github.com/linuxdeepin/ddm.git
+Homepage: https://github.com/LingmoOS/ddm
 Rules-Requires-Root: no
 
 Package: ddm
