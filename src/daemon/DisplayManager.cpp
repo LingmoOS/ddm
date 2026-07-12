@@ -44,8 +44,8 @@ namespace DDM {
         connection.registerService(DISPLAYMANAGER_SERVICE);
         connection.registerObject(DISPLAYMANAGER_PATH, this);
 
-        connection.registerService("org.deepin.DisplayManager");
-        connection.registerObject("/org/deepin/DisplayManager", this);
+        connection.registerService("org.lingmo.DisplayManager");
+        connection.registerObject("/org/lingmo/DisplayManager", this);
     }
 
     QString DisplayManager::seatPath(const QString &seatName) {
